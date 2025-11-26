@@ -20,6 +20,7 @@ function criarItemCardapio(titulo, descricao, foto){
     divItemCardipio.appendChild(img)
 
     divC.appendChild(divItemCardipio)
+    
 }
 criarItemCardapio(
     'Bolo de Chocolate',
