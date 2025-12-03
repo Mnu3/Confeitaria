@@ -32,3 +32,19 @@ criarItemCardapio(
     'O nosso deliciosso bolo de morango, super refrescante e perfeito para todas as ocasioes.',
     'https://claudia.abril.com.br/wp-content/uploads/2020/02/receita-bolo-morango-chantilly.jpg?quality=70&strip=info&resize=1080,565&crop=1'
 )
+
+//conexao com o banco de dados
+async function getData() {
+  const url = "https://confeitaria-api-t8xb.onrender.com/cardapio";
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`Response status: ${response.status}`);
+    }
+
+    const result = await response.json();
+    console.log(result);
+  } catch (error) {
+    console.error(error.message);
+  }
+}
