@@ -29,6 +29,6 @@ criarItemCardapio(
 )
 criarItemCardapio(
     'Bolo de Morango',
-    'O nosso deliciosso bolo de morango,\n super refrescante e perfeito para todas as ocasioes.',
+    'O nosso deliciosso bolo de morango, super refrescante e perfeito para todas as ocasioes.',
     'https://claudia.abril.com.br/wp-content/uploads/2020/02/receita-bolo-morango-chantilly.jpg?quality=70&strip=info&resize=1080,565&crop=1'
 )
