@@ -22,16 +22,6 @@ function criarItemCardapio(titulo, descricao, foto){
     divC.appendChild(divItemCardipio)
 
 }
-criarItemCardapio(
-    'Bolo de Chocolate',
-    'Um clássico irresistível com camadas de chocolate',
-    'https://www.comidaereceitas.com.br/img/sizeswp/1200x675/2020/05/bolo_chocolate_leite.jpg'
-)
-criarItemCardapio(
-    'Bolo de Morango',
-    'O nosso deliciosso bolo de morango, super refrescante e perfeito para todas as ocasioes.',
-    'https://claudia.abril.com.br/wp-content/uploads/2020/02/receita-bolo-morango-chantilly.jpg?quality=70&strip=info&resize=1080,565&crop=1'
-)
 
 //conexao com o banco de dados
 async function getData() {
@@ -43,6 +33,13 @@ async function getData() {
     }
 
     const result = await response.json();
+    for(let i = 0; i < result.length; i++){
+        criarItemCardapio(
+        result.titulo,
+        result.descricao,
+        result.foto
+        )
+    }
     console.log(result);
   } catch (error) {
     console.error(error.message);
