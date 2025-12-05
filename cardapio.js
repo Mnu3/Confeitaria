@@ -46,4 +46,6 @@ async function getData() {
   }
 }
 
+getData()
+
 
